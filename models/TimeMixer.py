@@ -16,6 +16,7 @@ class DFT_series_decomp(nn.Module):
         self.top_k = top_k
 
     def forward(self, x):
+        
         xf = torch.fft.rfft(x)
         freq = abs(xf)
         freq[0] = 0
